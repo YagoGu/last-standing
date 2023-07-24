@@ -14,8 +14,7 @@ setInterval(() => {
 }, 4000);
 
 document.addEventListener("click", (event) => {
-    //checkn shoots
-    console.log(event.target);
+    //check if shooted
     if ((event.target.className.split(" ")[0] === "grid-item" && event.target.hasChildNodes()) || event.target.id === "alien") {
         newAlien.alienDie()
     }
