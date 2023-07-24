@@ -41,7 +41,7 @@ body {
     /*Border by image texture*/
     border: solid;
     border-image: url("/src/bg-interface.png");
-    border-image-slice: 20 22;
+    border-image-slice: 20 20;
     border-image-repeat: stretch;
     /*visual thingies to test*/
     color: white;
