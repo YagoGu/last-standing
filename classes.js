@@ -2,7 +2,7 @@ class Alien {
     constructor() {
         this.type = "base"
         this.life = 1
-        this.alienCounter = 0
+        this.alienCounter = false
     }
 
     //search for a random position
@@ -21,10 +21,13 @@ class Alien {
         console.log(position) //testing
 
         document.getElementsByClassName("grid-alien")[position].appendChild(alien)
+
+        this.alienCounter = true;
     }
 
     //alien timesout
     alienDie() {
         document.getElementById("alien").remove();
+        this.alienCounter = false;
     }
 }
