@@ -9,10 +9,10 @@ setInterval(() => {
         newAlien.alienSpawn(position);
     }
     
-}, 1000);
+}, 500);
 
 setInterval(() => {            
     newAlien.alienDie()
-}, 5000);
+}, 3000);
 
 game.gameLoop()
