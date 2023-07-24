@@ -1,7 +1,5 @@
 const game = new Game
 const newAlien = new Alien
-let position;
-
 
 setInterval(() => {
     if (newAlien.alienCounter === false) {
@@ -9,10 +7,21 @@ setInterval(() => {
         newAlien.alienSpawn(position);
     }
     
-}, 500);
+}, 250);
 
-setInterval(() => {            
+setInterval(() => {     
     newAlien.alienDie()
-}, 3000);
+}, 4000);
+
+document.addEventListener("click", (event) => {
+    //checkn shoots
+    console.log(event.target.className.split(" ")[0]);
+    if (event.target.className  || event.target.id === "alien") {
+        newAlien.alienDie()
+    }
+})
 
 game.gameLoop()
+
+
+// position.addEventListener("click", () => {console.log("shoot");})
