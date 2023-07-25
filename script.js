@@ -1,5 +1,6 @@
 const game = new Game
 const newAlien = new Alien
+const newPlayer = new Player;
 
 setInterval(() => {
     if (newAlien.alienCounter === false) {
@@ -14,10 +15,16 @@ setInterval(() => {
 }, 4000);
 
 document.addEventListener("click", (event) => {
-    //check if shooted
+    //check if alien is being shooted
     if ((event.target.className.split(" ")[0] === "grid-item" && event.target.hasChildNodes()) || event.target.id === "alien") {
         newAlien.alienDie()
+        newPlayer.shoot()
     }
+    //check if you shoot inside the grid but not an alien
+    else if (event.target.className.split(" ")[0]+" "+event.target.className.split(" ")[1] === "grid-item grid-alien") {
+        newPlayer.shoot()
+    }
+    // testing console.log(event.target.className.split(" ")[0]+" "+event.target.className.split(" ")[1])
 })
 
 game.gameLoop()

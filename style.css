@@ -14,7 +14,9 @@ body {
 .grid-p7 {grid-area : gridP7;}
 .grid-p8 {grid-area : gridP8;}
 .grid-p9 {grid-area : gridP9;}
-.grid-player {grid-area : footer;}
+.grid-score {grid-area : score;}
+.grid-player {grid-area : player;}
+.grid-life {grid-area : life;}
 
 .grid-container {
     background-image: url("/src/bg-gameplay.png");
@@ -31,7 +33,7 @@ body {
         'gridP1 gridP2 gridP3'
         "gridP4 gridP5 gridP6"
         "gridP7 gridP8 gridP9"
-        "footer footer footer";
+        "score player life";
     grid-template-columns: 10vw 10vw 10vw;
     grid-template-rows: 10vw 10vw 10vw 10vw;
 }
@@ -47,8 +49,13 @@ body {
     color: white;
 }
 
-.grid-player {
+.grid-player, .grid-score, .grid-life{
     background-image: url("/src/bg-interface.png");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#shotgun {
+    max-width: 130%;
+    margin-left: -2vw;
 }
