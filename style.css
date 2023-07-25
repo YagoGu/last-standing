@@ -4,6 +4,9 @@ body {
     background-size: cover;
 }
 
+/*GAME SCREEN*/
+
+
 /*steing names for grid items by developing a nice grid-template-areas*/
 .grid-p1 {grid-area : gridP1;}
 .grid-p2 {grid-area : gridP2;}
@@ -64,4 +67,63 @@ p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1vw;
     text-align: left;
+}
+
+/*GAME OVER SCREEN*/
+#gameOver {grid-area: GameOver}
+#highScore {grid-area: HighScore;}
+#aliensKilled {grid-area: AliensKilled;}
+#shootsFailed {grid-area: ShootsFailed;}
+#btn-restart {grid-area: BtnRestart;}
+
+
+#scoreScreen {
+    width: 80%;
+    height: 80%;
+    background-image: url("src/bg-interface.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2vw;
+    border-color: black;
+    border-style: solid;
+    display: grid;
+    grid-template-areas:
+        "GameOver"
+        "HighScore"
+        "AliensKilled"
+        "ShootsFailed"
+        "BtnRestart";
+}
+
+.score {
+    color: black;
+    text-align: center;
+    margin-bottom: 2%;
+    font-size: 2vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#gameOver {
+    margin: 5% 5% 1% 5%;
+    font-size: 4vw;
+    color: brown;
+}
+
+#btn-restart {
+    margin-left: 37%;
+    text-align: center;
+    width: 25%;
+    border-radius: 2vw;
+    border-color: yellow;
+    border-style: solid;
+    background-color: red;
+    color: blanchedalmond;
+}
+
+#highScore {
+    font-size: 3vw;
 }

@@ -32,7 +32,7 @@ document.getElementById("life-points").innerHTML = newPlayer.life;
 //score
 document.getElementById("number-total-score").innerHTML = newPlayer.scoreCounter(newPlayer.scoreAlien, newPlayer.scoreFailed)
 //enemies killed
-document.getElementById("number-zombies-killed").innerHTML = newPlayer.scoreAlien
+document.getElementById("number-aliens-killed").innerHTML = newPlayer.scoreAlien
 //shoots failed
 document.getElementById("number-shoots-failed").innerHTML = newPlayer.scoreFailed
 
@@ -46,7 +46,7 @@ document.addEventListener("click", (event) => {
         newPlayer.shoot(); //shoot animation
         alienBorn(); //create alien after it is killed
         newPlayer.scoreAlien += 1; //update score
-        document.getElementById("number-zombies-killed").innerHTML = newPlayer.scoreAlien
+        document.getElementById("number-aliens-killed").innerHTML = newPlayer.scoreAlien
     }
     //check if you shoot inside the grid but not an alien
     else if (event.target.className.split(" ")[0]+" "+event.target.className.split(" ")[1] === "grid-item grid-alien") {
