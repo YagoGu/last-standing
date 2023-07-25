@@ -39,9 +39,15 @@ document.getElementById("number-shoots-failed").innerHTML = newPlayer.scoreFaile
 alienBorn(); //call alien for the first time
 setInterval(() => {checkIfAlienKilled();}, 4000) //the alien have 4 seconds of life
 
+document.addEventListener("mouseover", (event) => {
+    if(event.target.className === "grid-item grid-alien") {
+        console.log("pepe")//change to a bullseye
+    }
+})
+
 document.addEventListener("click", (event) => {
     //check if alien is being shooted
-    if ((event.target.className.split(" ")[0] === "grid-item" && event.target.hasChildNodes()) || event.target.id === "alien") {
+    if ((event.target.className === "grid-item grid-alien" && event.target.hasChildNodes()) || event.target.id === "alien") {
         newAlien.alienDie(); //delete de alien if it is shooted
         newPlayer.shoot(); //shoot animation
         alienBorn(); //create alien after it is killed
@@ -49,7 +55,7 @@ document.addEventListener("click", (event) => {
         document.getElementById("number-aliens-killed").innerHTML = newPlayer.scoreAlien
     }
     //check if you shoot inside the grid but not an alien
-    else if (event.target.className.split(" ")[0]+" "+event.target.className.split(" ")[1] === "grid-item grid-alien") {
+    else if (event.target.className === "grid-item grid-alien") {
         newPlayer.shoot(); //shoot animation
         newPlayer.scoreFailed += 1; //update score
         document.getElementById("number-shoots-failed").innerHTML = newPlayer.scoreFailed
