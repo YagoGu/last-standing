@@ -26,8 +26,15 @@ function checkIfAlienKilled () {
         }
 }
 
-//function to check the life of the player
-document.getElementById("life-points").innerHTML = newPlayer.life //first update of life on the html
+//first update of thingies on html
+//life
+document.getElementById("life-points").innerHTML = newPlayer.life;
+//score
+document.getElementById("number-total-score").innerHTML = newPlayer.scoreCounter(newPlayer.scoreAlien, newPlayer.scoreFailed)
+//enemies killed
+document.getElementById("number-zombies-killed").innerHTML = newPlayer.scoreAlien
+//shoots failed
+document.getElementById("number-shoots-failed").innerHTML = newPlayer.scoreFailed
 
 alienBorn(); //call alien for the first time
 setInterval(() => {checkIfAlienKilled();}, 4000) //the alien have 4 seconds of life
