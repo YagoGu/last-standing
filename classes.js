@@ -38,6 +38,7 @@ class Player {
         this.scoreAlien = 0;
         this.scoreFailed = 0;
         this.scoreTotal = 0;
+        this.life = 4;
     }
 
     //shoot
