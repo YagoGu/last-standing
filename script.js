@@ -2,25 +2,37 @@ const game = new Game;
 const newAlien = new Alien;
 const newPlayer = new Player;
 
-setInterval(() => {
-    if (newAlien.alienCounter === false) {
-        position = newAlien.alienPositon();
-        newAlien.alienSpawn(position);
+function alienApear () {
+    if (newAlien.alienExist === false) {
+        setTimeout (() => {
+            position = newAlien.alienPositon();
+            newAlien.alienSpawn(position);
+        }, 1000)
     }
-    
-}, 250);
+}
 
-setInterval(() => {     
-    newAlien.alienDie();
-}, 4000);
+function checkIfAlienKilled () {
+    console.log(newAlien.alienExist) // testing if exist or not
+    if (newAlien.alienExist === true) {
+            newAlien.alienDie();
+            alienApear();
+        }
+}
+
+alienApear();
+setInterval(() => {checkIfAlienKilled();}, 4000)
 
 document.addEventListener("click", (event) => {
     //check if alien is being shooted
     if ((event.target.className.split(" ")[0] === "grid-item" && event.target.hasChildNodes()) || event.target.id === "alien") {
         newAlien.alienDie();
         newPlayer.shoot();
+        alienApear();
         newPlayer.scoreAlien += 1;
         document.getElementById("number-zombies-killed").innerHTML = newPlayer.scoreAlien
+        // setTimeout(() => {newAlien.alienDie();}, 4000);
+        // clearInterval(despawn)
+        // despawn = setInterval(() => {newAlien.alienDie();}, 5000);
     }
     //check if you shoot inside the grid but not an alien
     else if (event.target.className.split(" ")[0]+" "+event.target.className.split(" ")[1] === "grid-item grid-alien") {

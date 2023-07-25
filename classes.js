@@ -2,7 +2,7 @@ class Alien {
     constructor() {
         this.type = "base"
         this.life = 1
-        this.alienCounter = false
+        this.alienExist = false
     }
 
     //search for a random position
@@ -22,13 +22,13 @@ class Alien {
 
         document.getElementsByClassName("grid-alien")[position].appendChild(alien)
 
-        this.alienCounter = true;
+        this.alienExist = true;
     }
 
     //alien timesout
     alienDie() {
         document.getElementById("alien").remove();
-        this.alienCounter = false;
+        this.alienExist = false;
     }
 }
 
@@ -53,7 +53,7 @@ class Player {
 
     //points counter
     scoreCounter (killed, failed) {
-        this.scoreTotal = killed*1000 - failed*100;
+        this.scoreTotal = killed*1000 - failed*500;
         return this.scoreTotal;
     }
 
