@@ -4,7 +4,6 @@ class Game {
     constructor() {
         this.lives = 4;
         this.gameIsOver = false;
-        this.counter = 0;
     }
     gameLoop() {
         if (this.gameIsOver) {

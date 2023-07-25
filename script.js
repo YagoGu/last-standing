@@ -1,5 +1,5 @@
-const game = new Game
-const newAlien = new Alien
+const game = new Game;
+const newAlien = new Alien;
 const newPlayer = new Player;
 
 setInterval(() => {
@@ -11,23 +11,28 @@ setInterval(() => {
 }, 250);
 
 setInterval(() => {     
-    newAlien.alienDie()
+    newAlien.alienDie();
 }, 4000);
 
 document.addEventListener("click", (event) => {
     //check if alien is being shooted
     if ((event.target.className.split(" ")[0] === "grid-item" && event.target.hasChildNodes()) || event.target.id === "alien") {
-        newAlien.alienDie()
-        newPlayer.shoot()
+        newAlien.alienDie();
+        newPlayer.shoot();
+        newPlayer.scoreAlien += 1;
+        document.getElementById("number-zombies-killed").innerHTML = newPlayer.scoreAlien
     }
     //check if you shoot inside the grid but not an alien
     else if (event.target.className.split(" ")[0]+" "+event.target.className.split(" ")[1] === "grid-item grid-alien") {
-        newPlayer.shoot()
+        newPlayer.shoot();
+        newPlayer.scoreFailed += 1;
+        document.getElementById("number-shoots-failed").innerHTML = newPlayer.scoreFailed
     }
     // testing console.log(event.target.className.split(" ")[0]+" "+event.target.className.split(" ")[1])
+    document.getElementById("number-total-score").innerHTML = newPlayer.scoreCounter(parseInt(newPlayer.scoreAlien), parseInt(newPlayer.scoreFailed))
 })
 
-game.gameLoop()
+game.gameLoop();
 
 
 // position.addEventListener("click", () => {console.log("shoot");})

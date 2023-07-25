@@ -59,3 +59,9 @@ body {
     width: 130%;
     margin-left: -2vw;
 }
+
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1vw;
+    text-align: left;
+}

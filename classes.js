@@ -34,7 +34,10 @@ class Alien {
 
 class Player {
     constructor() {
-        this.score = 0;
+        this.damage = 1;
+        this.scoreAlien = 0;
+        this.scoreFailed = 0;
+        this.scoreTotal = 0;
     }
 
     //shoot
@@ -43,9 +46,15 @@ class Player {
         document.getElementById("shotgun").style.height = "102%"
         document.getElementById("shotgun").src = "/src/shotgun.gif"
         setTimeout (() => {
-            document.getElementById("shotgun").style.height = "102%"
             document.getElementById("shotgun").src = "/src/shotgun.png"
         }, 500)
         
     }
+
+    //points counter
+    scoreCounter (killed, failed) {
+        this.scoreTotal = killed*1000 - failed*100;
+        return this.scoreTotal;
+    }
+
 }
