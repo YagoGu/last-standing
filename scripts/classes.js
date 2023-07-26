@@ -44,13 +44,14 @@ class Player {
 
     //shoot
     shoot() {
-        //gif thingie
+        //gif thingie + sound
+        const shootSound = new Audio ("/audios/shotgun.mp3")
         document.getElementById("shotgun").style.height = "102%"
         document.getElementById("shotgun").src = "/src/shotgun.gif"
+        shootSound.play();
         setTimeout (() => {
-            document.getElementById("shotgun").src = "/src/shotgun.png"
+            document.getElementById("shotgun").src = "/src/shotgun.png"  
         }, 500)
-        
     }
 
     //points counter
