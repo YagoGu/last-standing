@@ -1,9 +1,17 @@
 const game = new Game;
 const newAlien = new Alien;
 const newPlayer = new Player;
-
 //set the basic grid
 const gameScreenShow = gameScreenGenerator();
+
+function ost() {
+    const soundTrack = new Audio ("/audios/soundTrack.mp3");
+    soundTrack.volume= 0.2;
+    return soundTrack;
+}
+
+let mainTheme = ost();
+
 document.getElementById("grid").innerHTML = gameScreenShow;
 document.getElementById("grid").style.display = "none";
 
@@ -25,6 +33,7 @@ document.addEventListener("click", (event) => {
         document.getElementById("number-shoots-failed").innerHTML = newPlayer.scoreFailed
         document.getElementById("number-total-score").innerHTML = newPlayer.scoreCounter(newPlayer.scoreAlien, newPlayer.scoreFailed)
         newPlayer.changeFace(); //put first face
+        mainTheme.play(); //start ost when btn-start is clicked
     }
 })
 
@@ -45,11 +54,13 @@ function checkIfAlienKilled () {
             newAlien.alienDie();
             alienBorn();
             newPlayer.life-=1; //we take one players life because he get hit
-            newPlayer.changeFace(); //update faces
-            document.getElementById("life-points").innerHTML = newPlayer.life //update life on the html
             if (newPlayer.life <= 0) {
+                mainTheme.pause(); //stop the music when dying
+                mainTheme.currentTime = 0; //reset music
                 game.gameIsOver = true;
             }
+            newPlayer.changeFace(); //update faces + sounds
+            document.getElementById("life-points").innerHTML = newPlayer.life //update life on the html
         }
 }
 
@@ -65,6 +76,7 @@ document.addEventListener("click", (event) => {
         document.getElementById("number-shoots-failed").innerHTML = newPlayer.scoreFailed
         document.getElementById("number-total-score").innerHTML = newPlayer.scoreCounter(newPlayer.scoreAlien, newPlayer.scoreFailed)
         newPlayer.changeFace(); //put first face
+        mainTheme.play(); //start ost when btn-restart is clicked
     }
 })
 
