@@ -8,16 +8,16 @@
 </head>
 <body>
     <!--Basic game layout START-->
-    <div class="grid-container">
-        <div class="grid-item grid-alien"></div>
-        <div class="grid-item grid-alien"></div>
-        <div class="grid-item grid-alien"></div>
-        <div class="grid-item grid-alien"></div>
-        <div class="grid-item grid-alien"></div>
-        <div class="grid-item grid-alien"></div>
-        <div class="grid-item grid-alien"></div>
-        <div class="grid-item grid-alien"></div>
-        <div class="grid-item grid-alien"></div>
+    <div id="grid">
+        <div class="grid-item grid-alien" id="gridP1"></div>
+        <div class="grid-item grid-alien" id="gridP2"></div>
+        <div class="grid-item grid-alien" id="gridP3"></div>
+        <div class="grid-item grid-alien" id="gridP4"></div>
+        <div class="grid-item grid-alien" id="gridP5"></div>
+        <div class="grid-item grid-alien" id="gridP6"></div>
+        <div class="grid-item grid-alien" id="gridP7"></div>
+        <div class="grid-item grid-alien" id="gridP8"></div>
+        <div class="grid-item grid-alien" id="gridP9"></div>
         <div class="grid-item grid-score">
             <p>Score: <b id="number-total-score"></b></p>
             <p>Aliens killed: <b id="number-aliens-killed"></b></p>
@@ -27,6 +27,11 @@
         <div class="grid-item grid-life"><p>Life: <b id="life-points"></b></p></div>
     </div>
     <!--Basic game layout END-->
+
+    <!--game over screen START-->
+    <main id="scoreScreen"></main>
+    <!--game over screen END-->
+
     <script src="/scripts/classes.js"></script>
     <script src="/scripts/game.js"></script>
     <script src="/scripts/script.js"></script>

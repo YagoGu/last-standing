@@ -18,7 +18,7 @@ class Alien {
         alien.src="/src/alien.gif"
         alien.style.width = "60%"
         
-        console.log(position) //testing
+        //console.log(position) //testing
 
         document.getElementsByClassName("grid-alien")[position].appendChild(alien)
 
@@ -27,8 +27,9 @@ class Alien {
 
     //alien timesout
     alienDie() {
-        document.getElementById("alien").remove();
         this.alienExist = false;
+        document.getElementById("alien").remove();
+        
     }
 }
 

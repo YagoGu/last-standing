@@ -14,7 +14,7 @@ function alienBorn () {
 
 //this function will check if the alien is alive, is the alien it isn't killed despawn it and create a new one
 function checkIfAlienKilled () {
-    console.log(newAlien.alienExist) // testing if exist or not
+    //console.log(newAlien.alienExist) // testing if exist or not
     if (newAlien.alienExist === true) {
             newAlien.alienDie();
             alienBorn();
@@ -41,7 +41,7 @@ setInterval(() => {checkIfAlienKilled();}, 4000) //the alien have 4 seconds of l
 
 document.addEventListener("mouseover", (event) => {
     if(event.target.className === "grid-item grid-alien") {
-        console.log("pepe")//change to a bullseye
+        //console.log("pepe")//change to a bullseye
     }
 })
 
