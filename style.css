@@ -12,7 +12,7 @@ body {
 #gridP3 {grid-area : gridP3;}
 #gridP4 {grid-area : gridP4;}
 #gridP5 {grid-area : gridP5;}
-#gridP6 {grid-area : gridP6;}
+#griP6 {grid-area : gridP6;}
 #gridP7 {grid-area : gridP7;}
 #gridP8 {grid-area : gridP8;}
 #gridP9 {grid-area : gridP9;}
@@ -68,6 +68,40 @@ p {
     text-align: left;
 }
 
+.grid-p1 {grid-area : gridP1;}
+.grid-p2 {grid-area : gridP2;}
+.grid-p3 {grid-area : gridP3;}
+.grid-p4 {grid-area : gridP4;}
+.grid-p5 {grid-area : gridP5;}
+.grid-p6 {grid-area : gridP6;}
+.grid-p7 {grid-area : gridP7;}
+.grid-p8 {grid-area : gridP8;}
+.grid-p9 {grid-area : gridP9;}
+.grid-score {grid-area : score;}
+.grid-player {grid-area : player;}
+.grid-life {grid-area : life;}
+
+#grid {
+    background-image: url("/src/bg-gameplay.png");
+    background-repeat: no-repeat;
+    background-size: 100% 75%;
+    /*centering the main grid*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*creating the grid*/
+    display: grid;
+    grid-template-areas: 
+        'gridP1 gridP2 gridP3'
+        "gridP4 gridP5 gridP6"
+        "gridP7 gridP8 gridP9"
+        "score player life";
+    grid-template-columns: 10vw 10vw 10vw;
+    grid-template-rows: 10vw 10vw 10vw 10vw;
+}
+
+
 /*GAME OVER SCREEN*/
 #gameOver {grid-area: GameOver}
 #highScore {grid-area: HighScore;}
@@ -100,6 +134,7 @@ p {
 /*HOW to display game over screen*/
 #scoreScreen {
     display: none;
+    height: 100%;
 }
 
 .score {
