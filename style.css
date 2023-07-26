@@ -47,8 +47,6 @@ body {
     border-image: url("/src/bg-interface.png");
     border-image-slice: 20 20;
     border-image-repeat: stretch;
-    /*visual thingies to test*/
-    color: white;
 }
 
 .grid-player, .grid-score, .grid-life{
@@ -252,4 +250,5 @@ p {
 
 .grid-life > p {
     text-align: center;
+    color: white;
 }
