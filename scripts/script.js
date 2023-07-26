@@ -81,13 +81,6 @@ document.getElementById("number-shoots-failed").innerHTML = newPlayer.scoreFaile
 alienBorn(); //call alien for the first time
 setInterval(() => {checkIfAlienKilled();}, 4000) //the alien have 4 seconds of life
 
-//bullseye try
-// document.addEventListener("mouseover", (event) => {
-//     if(event.target.className === "grid-item grid-alien" || event.target.id === "alien") {
-//         console.log("pepe")
-//     }
-// })
-
 document.addEventListener("click", (event) => {
     //check if alien is being shooted
     if ((event.target.className === "grid-item grid-alien" && event.target.hasChildNodes()) || event.target.id === "alien") {

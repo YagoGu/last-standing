@@ -99,7 +99,11 @@ p {
     grid-template-rows: 10vw 10vw 10vw 10vw;
 }
 
-
+.grid-alien:hover{
+    background-image: url("/src/bullseye.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
 /*GAME OVER SCREEN*/
 #gameOver {grid-area: GameOver}
 #highScore {grid-area: HighScore;}
@@ -129,7 +133,46 @@ p {
         "BtnRestart";
 }
 
-/*HOW to display game over screen*/
+#watch {
+    background-color: yellowgreen;
+    width: 80%;
+    height: 75%;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    border-width: 0.5vw;
+    border-radius: 1vw;
+    border-style: solid;
+    border-color: black;
+}
+
+#doom-guy-face {
+    background-color: black;
+    border-radius: 1vw;
+    border-color: brown;
+    border-style: solid;
+    padding: 10%;
+    margin-top: -0.5vw;
+}
+
+#watch > p {
+    text-align: center;
+    color: black;
+}
+
+#heart{
+    width: 1vw;
+}
+
+#life-points {
+    color: white;
+}
+
+.grid-life > p {
+    text-align: center;
+    color: white;
+}
+
+/*Display game over screen*/
 #scoreScreen {
     display: none;
     height: 100%;
@@ -210,45 +253,7 @@ p {
     padding: 1vw;
 }
 
-#doom-guy-face {
-    background-color: black;
-    border-radius: 1vw;
-    border-color: brown;
-    border-style: solid;
-    padding: 10%;
-    margin-top: -0.5vw;
-}
-
 #btn-start:hover, #btn-restart:hover {
     filter: brightness(85%);
 }
 
-#watch {
-    background-color: yellowgreen;
-    width: 80%;
-    height: 75%;
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-    border-width: 0.5vw;
-    border-radius: 1vw;
-    border-style: solid;
-    border-color: black;
-}
-
-#watch > p {
-    text-align: center;
-    color: black;
-}
-
-#heart{
-    width: 1vw;
-}
-
-#life-points {
-    color: white;
-}
-
-.grid-life > p {
-    text-align: center;
-    color: white;
-}
