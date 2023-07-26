@@ -237,7 +237,19 @@ p {
     border-color: black;
 }
 
-p {
+#watch > p {
     text-align: center;
     color: black;
+}
+
+#heart{
+    width: 1vw;
+}
+
+#life-points {
+    color: white;
+}
+
+.grid-life > p {
+    text-align: center;
 }

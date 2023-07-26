@@ -35,8 +35,8 @@ function gameScreenGenerator () {
         </div>
         <div class="grid-item grid-player"><img src="/src/shotgun.png" alt="shotgun" id="shotgun"></div>
         <div class="grid-item grid-life">
-            <p>Life: <b id="life-points"></b></p>
-            <img src="/src/doom-guy-face-4" alt="doom-guy-face" id="doom-guy-face">
+            <p><img src="/src/heart.png" alt="heart" id="heart"> X <b id="life-points"></b></p>
+            <img src="/src/doom-guy-face-4.png" alt="doom-guy-face" id="doom-guy-face">
         </div>
     `
     return gameScreen;
