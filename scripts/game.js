@@ -26,11 +26,13 @@ class Game {
             document.getElementById("scoreScreen").innerHTML = scoreScreenShow
             document.getElementById("scoreScreen").style.display = "grid"
             document.getElementById("grid").style.display = "none"
+            //If we click the btn-restart we will change desplayed elements, change the control variable and call again the loop
             document.addEventListener("click", (event) => {
-                 if (event.target.id === "btn-restart") {
+                if (event.target.id === "btn-restart") {
                     document.getElementById("scoreScreen").style.display = "none"
                     document.getElementById("grid").style.display = "grid"
                     this.gameIsOver = false;
+                    window.requestAnimationFrame(() => {this.gameLoop()})
                 }
             })
         }

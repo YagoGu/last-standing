@@ -18,13 +18,27 @@ function checkIfAlienKilled () {
     if (newAlien.alienExist === true) {
             newAlien.alienDie();
             alienBorn();
-            newPlayer.life-=1; //we take one players life because he get hit
+            newPlayer.life-=1; //we take one players life because he get hitg
             document.getElementById("life-points").innerHTML = newPlayer.life //update life on the html
-            if (newPlayer.life === 0) {
+            if (newPlayer.life <= 0) {
                 game.gameIsOver = true;
             }
         }
 }
+
+//here we check if the btn-restart is pressed, then with that we restart too our score, life, etc
+document.addEventListener("click", (event) => {
+    if (event.target.id === "btn-restart") {
+        newPlayer.life = 4;
+        newPlayer.scoreAlien = 0;
+        newPlayer.scoreFailed = 0;
+        newPlayer.scoreTotal = 0;
+        document.getElementById("life-points").innerHTML = newPlayer.life;
+        document.getElementById("number-aliens-killed").innerHTML = newPlayer.scoreAlien
+        document.getElementById("number-shoots-failed").innerHTML = newPlayer.scoreFailed
+        document.getElementById("number-total-score").innerHTML = newPlayer.scoreCounter(newPlayer.scoreAlien, newPlayer.scoreFailed)
+    }
+})
 
 //first update of thingies on html
 //life
