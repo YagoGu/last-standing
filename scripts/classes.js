@@ -62,7 +62,9 @@ class Player {
 
     //change face on life points
     changeFace () {
+        //sound of taking lifes and diying
         const attackedSound = new Audio ("/audios/attacked.mp3")
+        const playerDiedSound = new Audio ("/audios/playerDied.mp3")
         switch (this.life) {
             case 4:
                 document.getElementById("doom-guy-face").src = "/src/doom-guy-face-4.png";
@@ -80,7 +82,7 @@ class Player {
                 attackedSound.play();
                 break;
             case 0:
-                attackedSound.play();
+                playerDiedSound.play();
                 break;
         }
     }
