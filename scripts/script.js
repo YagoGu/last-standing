@@ -2,6 +2,31 @@ const game = new Game;
 const newAlien = new Alien;
 const newPlayer = new Player;
 
+//set the basic grid
+const gameScreenShow = gameScreenGenerator();
+document.getElementById("grid").innerHTML = gameScreenShow;
+document.getElementById("grid").style.display = "none";
+
+//startscreen
+
+document.addEventListener("click", (event) => {
+    if(event.target.id === "btn-start") {
+        //part of game constructor to lnow if it can start
+        game.gameStart = true;
+        game.gameIsOver = false;
+        document.getElementById("startScreen").style.display = "none"
+        document.getElementById("grid").style.display = "grid"
+        newPlayer.life = 4;
+        newPlayer.scoreAlien = 0;
+        newPlayer.scoreFailed = 0;
+        newPlayer.scoreTotal = 0;
+        document.getElementById("life-points").innerHTML = newPlayer.life;
+        document.getElementById("number-aliens-killed").innerHTML = newPlayer.scoreAlien
+        document.getElementById("number-shoots-failed").innerHTML = newPlayer.scoreFailed
+        document.getElementById("number-total-score").innerHTML = newPlayer.scoreCounter(newPlayer.scoreAlien, newPlayer.scoreFailed)
+    }
+})
+
 //this function will generate a new alien of there is not one on the battlefield
 function alienBorn () {
     if (newAlien.alienExist === false) {

@@ -110,8 +110,8 @@ p {
 #btn-restart {grid-area: BtnRestart;}
 
 #scoreScreen {
-    width: 80%;
-    height: 80%;
+    width: 70%;
+    height: 70%;
     background-image: url("src/bg-interface.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -148,12 +148,12 @@ p {
 }
 
 #gameOver {
-    margin: 5% 5% 1% 5%;
+    margin: 1% 5% -1% 5%;
     font-size: 4vw;
     color: brown;
 }
 
-#btn-restart {
+#btn-restart, #btn-start {
     margin-top: 2vw;
     margin-left: 37%;
     text-align: center;
@@ -167,4 +167,46 @@ p {
 
 #highScore {
     font-size: 3vw;
+}
+
+/*START SCREEN*/
+
+#game-title {grid-area: gametitle;}
+#doom-guy {grid-area: doomguy;}
+#btn-start {grid-area: btnstart;}
+
+#startScreen {
+    width: 70%;
+    height: 70%;
+    background-image: url("src/bg-interface.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2vw;
+    border-color: black;
+    border-style: solid;
+    display: grid;
+    grid-template-areas:
+        "gametitle"
+        "doomguy"
+        "btnstart";
+}
+
+#doom-guy {
+    margin-left: 25%;
+}
+
+#game-title {
+    text-align: center;
+    margin: 5% 5% 1% 5%;
+    font-size: 4vw;
+    color: brown;
+}
+
+#btn-start {
+    font-size: 2vw;
+    margin-bottom: 2%;
 }

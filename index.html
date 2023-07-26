@@ -7,25 +7,16 @@
     <title>Last standing</title>
 </head>
 <body>
+    <!--start screen START-->
+    <main id="startScreen">
+        <h1 id="game-title">LAST STANDING</h1>
+        <img src="/src/doom-guy.png" alt="DOOM GUY" id="doom-guy">
+        <button id="btn-start">START</button>
+    </main>
+    <!--start screen END-->
+
     <!--Basic game layout START-->
-    <div id="grid">
-        <div class="grid-item grid-alien" id="gridP1"></div>
-        <div class="grid-item grid-alien" id="gridP2"></div>
-        <div class="grid-item grid-alien" id="gridP3"></div>
-        <div class="grid-item grid-alien" id="gridP4"></div>
-        <div class="grid-item grid-alien" id="gridP5"></div>
-        <div class="grid-item grid-alien" id="gridP6"></div>
-        <div class="grid-item grid-alien" id="gridP7"></div>
-        <div class="grid-item grid-alien" id="gridP8"></div>
-        <div class="grid-item grid-alien" id="gridP9"></div>
-        <div class="grid-item grid-score">
-            <p>Score: <b id="number-total-score"></b></p>
-            <p>Aliens killed: <b id="number-aliens-killed"></b></p>
-            <p>Failed shoots: <b id="number-shoots-failed"></b></p>
-        </div>
-        <div class="grid-item grid-player"><img src="/src/shotgun.png" alt="shotgun" id="shotgun"></div>
-        <div class="grid-item grid-life"><p>Life: <b id="life-points"></b></p></div>
-    </div>
+    <div id="grid"></div>
     <!--Basic game layout END-->
 
     <!--game over screen START-->
