@@ -176,8 +176,8 @@ p {
 #btn-start {grid-area: btnstart;}
 
 #startScreen {
-    width: 70%;
-    height: 70%;
+    width: 80%;
+    height: 80%;
     background-image: url("src/bg-interface.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -196,7 +196,7 @@ p {
 }
 
 #doom-guy {
-    margin-left: 25%;
+    margin-left: 28%;
 }
 
 #game-title {
@@ -209,6 +209,7 @@ p {
 #btn-start {
     font-size: 2vw;
     margin-bottom: 2%;
+    padding: 1vw;
 }
 
 #doom-guy-face {
