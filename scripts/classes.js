@@ -59,4 +59,21 @@ class Player {
         return this.scoreTotal;
     }
 
+    //change face on life points
+    changeFace () {
+        switch (this.life) {
+            case 4:
+                document.getElementById("doom-guy-face").src = "/src/doom-guy-face-4.png"
+                break;
+            case 3:
+                document.getElementById("doom-guy-face").src = "/src/doom-guy-face-3.png"
+                break;
+            case 2:
+                document.getElementById("doom-guy-face").src = "/src/doom-guy-face-2.png"
+                break;
+            case 1:
+                document.getElementById("doom-guy-face").src = "/src/doom-guy-face-1.png"
+                break;
+        }
+    }
 }

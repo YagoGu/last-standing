@@ -210,3 +210,12 @@ p {
     font-size: 2vw;
     margin-bottom: 2%;
 }
+
+#doom-guy-face {
+    background-color: black;
+    border-radius: 1vw;
+    border-color: brown;
+    border-style: solid;
+    padding: 10%;
+    margin-top: -0.5vw;
+}

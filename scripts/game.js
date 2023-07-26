@@ -32,7 +32,10 @@ function gameScreenGenerator () {
             <p>Failed shoots: <b id="number-shoots-failed"></b></p>
         </div>
         <div class="grid-item grid-player"><img src="/src/shotgun.png" alt="shotgun" id="shotgun"></div>
-        <div class="grid-item grid-life"><p>Life: <b id="life-points"></b></p></div>
+        <div class="grid-item grid-life">
+            <p>Life: <b id="life-points"></b></p>
+            <img src="/src/doom-guy-face-4" alt="doom-guy-face" id="doom-guy-face">
+        </div>
     `
     return gameScreen;
 }

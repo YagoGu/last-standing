@@ -24,6 +24,7 @@ document.addEventListener("click", (event) => {
         document.getElementById("number-aliens-killed").innerHTML = newPlayer.scoreAlien
         document.getElementById("number-shoots-failed").innerHTML = newPlayer.scoreFailed
         document.getElementById("number-total-score").innerHTML = newPlayer.scoreCounter(newPlayer.scoreAlien, newPlayer.scoreFailed)
+        newPlayer.changeFace(); //put first face
     }
 })
 
@@ -43,7 +44,8 @@ function checkIfAlienKilled () {
     if (newAlien.alienExist === true) {
             newAlien.alienDie();
             alienBorn();
-            newPlayer.life-=1; //we take one players life because he get hitg
+            newPlayer.life-=1; //we take one players life because he get hit
+            newPlayer.changeFace(); //update faces
             document.getElementById("life-points").innerHTML = newPlayer.life //update life on the html
             if (newPlayer.life <= 0) {
                 game.gameIsOver = true;
@@ -62,6 +64,7 @@ document.addEventListener("click", (event) => {
         document.getElementById("number-aliens-killed").innerHTML = newPlayer.scoreAlien
         document.getElementById("number-shoots-failed").innerHTML = newPlayer.scoreFailed
         document.getElementById("number-total-score").innerHTML = newPlayer.scoreCounter(newPlayer.scoreAlien, newPlayer.scoreFailed)
+        newPlayer.changeFace(); //put first face
     }
 })
 
@@ -78,11 +81,12 @@ document.getElementById("number-shoots-failed").innerHTML = newPlayer.scoreFaile
 alienBorn(); //call alien for the first time
 setInterval(() => {checkIfAlienKilled();}, 4000) //the alien have 4 seconds of life
 
-document.addEventListener("mouseover", (event) => {
-    if(event.target.className === "grid-item grid-alien") {
-        //console.log("pepe")//change to a bullseye
-    }
-})
+//bullseye try
+// document.addEventListener("mouseover", (event) => {
+//     if(event.target.className === "grid-item grid-alien" || event.target.id === "alien") {
+//         console.log("pepe")
+//     }
+// })
 
 document.addEventListener("click", (event) => {
     //check if alien is being shooted
