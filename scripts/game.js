@@ -7,9 +7,9 @@ function highScoreScreenGenerator() {
 
     let highScoreScreen = `
         <h1 class="score" id="gameOver">GAME OVER</h1>
-        <h2 class="score" id="highScore">High score: ${highScore} points</h2>
-        <h2 class="score" id="aliensKilled">Aliens Killed: ${aliensKilled} x 1000 = +${aliensKilled*1000} points</h2>
-        <h2 class="score" id="shootsFailed">Failed Shoots: ${shootsFailed} x 500 = -${shootsFailed*500} points</h2>
+        <h2 class="score" id="highScore">H.S. = High score: ${highScore} points</h2>
+        <h2 class="score" id="aliensKilled">A.K. = Aliens Killed: ${aliensKilled} x 1000 = +${aliensKilled*1000} points</h2>
+        <h2 class="score" id="shootsFailed">F.S. = Failed Shoots: ${shootsFailed} x 500 = -${shootsFailed*500} points</h2>
         <button class= "score" id="btn-restart">RE-START</button>
     `;
     return highScoreScreen
