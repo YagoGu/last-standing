@@ -27,9 +27,11 @@ function gameScreenGenerator () {
         <div class="grid-item grid-alien" id="gridP8"></div>
         <div class="grid-item grid-alien" id="gridP9"></div>
         <div class="grid-item grid-score">
-            <p>Score: <b id="number-total-score"></b></p>
-            <p>Aliens killed: <b id="number-aliens-killed"></b></p>
-            <p>Failed shoots: <b id="number-shoots-failed"></b></p>
+            <div id="watch">
+                <p>H.S. <b id="number-total-score"></b></p>
+                <p>A.K. <b id="number-aliens-killed"></b></p>
+                <p>F.S. <b id="number-shoots-failed"></b></p>
+            </div>
         </div>
         <div class="grid-item grid-player"><img src="/src/shotgun.png" alt="shotgun" id="shotgun"></div>
         <div class="grid-item grid-life">
