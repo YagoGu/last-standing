@@ -13,6 +13,19 @@ function ost() {
 
 let mainTheme = ost();
 
+function resetStats() {
+    newPlayer.life = 4;
+    newPlayer.scoreAlien = 0;
+    newPlayer.scoreFailed = 0;
+    newPlayer.scoreTotal = 0;
+    document.getElementById("life-points").innerHTML = newPlayer.life;
+    document.getElementById("number-aliens-killed").innerHTML = newPlayer.scoreAlien
+    document.getElementById("number-shoots-failed").innerHTML = newPlayer.scoreFailed
+    document.getElementById("number-total-score").innerHTML = newPlayer.scoreCounter(newPlayer.scoreAlien, newPlayer.scoreFailed)
+    newPlayer.changeFace(); //put first face
+    mainTheme.play(); //start ost when btn-restart is clicked
+}
+
 document.getElementById("grid").innerHTML = gameScreenShow;
 document.getElementById("grid").style.display = "none";
 
@@ -25,16 +38,7 @@ document.addEventListener("click", (event) => {
         game.gameIsOver = false;
         document.getElementById("startScreen").style.display = "none"
         document.getElementById("grid").style.display = "grid"
-        newPlayer.life = 4;
-        newPlayer.scoreAlien = 0;
-        newPlayer.scoreFailed = 0;
-        newPlayer.scoreTotal = 0;
-        document.getElementById("life-points").innerHTML = newPlayer.life;
-        document.getElementById("number-aliens-killed").innerHTML = newPlayer.scoreAlien
-        document.getElementById("number-shoots-failed").innerHTML = newPlayer.scoreFailed
-        document.getElementById("number-total-score").innerHTML = newPlayer.scoreCounter(newPlayer.scoreAlien, newPlayer.scoreFailed)
-        newPlayer.changeFace(); //put first face
-        mainTheme.play(); //start ost when btn-start is clicked
+        resetStats();
     }
 })
 
@@ -68,16 +72,7 @@ function checkIfAlienKilled () {
 //here we check if the btn-restart is pressed, then with that we restart too our score, life, etc
 document.addEventListener("click", (event) => {
     if (event.target.id === "btn-restart") {
-        newPlayer.life = 4;
-        newPlayer.scoreAlien = 0;
-        newPlayer.scoreFailed = 0;
-        newPlayer.scoreTotal = 0;
-        document.getElementById("life-points").innerHTML = newPlayer.life;
-        document.getElementById("number-aliens-killed").innerHTML = newPlayer.scoreAlien
-        document.getElementById("number-shoots-failed").innerHTML = newPlayer.scoreFailed
-        document.getElementById("number-total-score").innerHTML = newPlayer.scoreCounter(newPlayer.scoreAlien, newPlayer.scoreFailed)
-        newPlayer.changeFace(); //put first face
-        mainTheme.play(); //start ost when btn-restart is clicked
+        resetStats();
     }
 })
 
