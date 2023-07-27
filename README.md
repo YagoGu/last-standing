@@ -28,10 +28,10 @@
 
     On here I just created *3 elements* with only one of them having more content than id:
     * **main id="startScreen":** This element is the one that have other tags inside of itself, it will be our start screen when we load the page for the first time, in her we will see a soldier walking, the title of the game and the buton to start.
-    ![startScreen](./src-readme/startScreen.png)
+    ![startScreen](./src-readme/startScreen.gif)
 
     * **div id="grid":** This div element is where all the game will be stored *(I prefer to use a grid to divide in a better wway the space of the player)*.
-    ![gameScreen](./src-readme/gameScreen.png)
+    ![gameScreen](./src-readme/gameScreen.gif)
 
     * **main id="scoreScreen":** The last one is for when the player dies show a gameover screen with the player stats and a button to restart the game.
     ![endScreen](./src-readme/endScreen.png)
