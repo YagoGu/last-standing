@@ -47,10 +47,10 @@ class Player {
         //gif thingie + sound
         const shootSound = new Audio ("/audios/shotgun.mp3")
         document.getElementById("shotgun").style.height = "102%"
-        document.getElementById("shotgun").src = "/src/shotgun.gif"
+        document.getElementById("shotgun").src = "./src/shotgun.gif"
         shootSound.play();
         setTimeout (() => {
-            document.getElementById("shotgun").src = "/src/shotgun.png"  
+            document.getElementById("shotgun").src = "./src/shotgun.png"  
         }, 500)
     }
 
@@ -63,8 +63,8 @@ class Player {
     //change face on life points
     changeFace () {
         //sound of taking lifes and diying
-        const attackedSound = new Audio ("/audios/attacked.mp3")
-        const playerDiedSound = new Audio ("/audios/playerDied.mp3")
+        const attackedSound = new Audio ("./audios/attacked.mp3")
+        const playerDiedSound = new Audio ("./audios/playerDied.mp3")
         switch (this.life) {
             case 4:
                 document.getElementById("doom-guy-face").src = "/src/doom-guy-face-4.png";

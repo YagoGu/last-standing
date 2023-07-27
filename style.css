@@ -1,5 +1,5 @@
 body {
-    background-image: url("/src/bg-body.png");
+    background-image: url("./src/bg-body.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -21,7 +21,7 @@ body {
 .grid-life {grid-area : life;}
 
 #grid {
-    background-image: url("/src/bg-gameplay.png");
+    background-image: url("./src/bg-gameplay.png");
     background-repeat: no-repeat;
     background-size: 100% 75%;
     /*centering the main grid*/
@@ -44,13 +44,13 @@ body {
     text-align: center;
     /*Border by image texture*/
     border: solid;
-    border-image: url("/src/bg-interface.png");
+    border-image: url("./src/bg-interface.png");
     border-image-slice: 20 20;
     border-image-repeat: stretch;
 }
 
 .grid-player, .grid-score, .grid-life{
-    background-image: url("/src/bg-interface.png");
+    background-image: url("./src/bg-interface.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -80,7 +80,7 @@ p {
 .grid-life {grid-area : life;}
 
 #grid {
-    background-image: url("/src/bg-gameplay.png");
+    background-image: url("./src/bg-gameplay.png");
     background-repeat: no-repeat;
     background-size: 100% 75%;
     /*centering the main grid*/
@@ -100,7 +100,7 @@ p {
 }
 
 .grid-alien:hover{
-    background-image: url("/src/bullseye.png");
+    background-image: url("./src/bullseye.png");
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -114,7 +114,7 @@ p {
 #scoreScreen {
     width: 70%;
     height: 70%;
-    background-image: url("src/bg-interface.png");
+    background-image: url("./src/bg-interface.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     position: absolute;
@@ -221,7 +221,7 @@ p {
 #startScreen {
     width: 80%;
     height: 80%;
-    background-image: url("src/bg-interface.png");
+    background-image: url("./src/bg-interface.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     position: absolute;

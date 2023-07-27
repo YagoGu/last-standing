@@ -5,7 +5,7 @@ const newPlayer = new Player;
 const gameScreenShow = gameScreenGenerator();
 
 function ost() {
-    const soundTrack = new Audio ("/audios/soundTrack.mp3");
+    const soundTrack = new Audio ("./audios/soundTrack.mp3");
     soundTrack.volume = 0.2;
     soundTrack.loop = true;
     return soundTrack;
