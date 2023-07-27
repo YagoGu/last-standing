@@ -60,10 +60,12 @@
 * **Button hover** property where I set to decrease the brightnees of the button when the cursor it's over it.
 
 ![buttonProperties](./src-readme/buttonProperties.png)
+
 ![buttonHover](./src-readme/buttonHover.png)
 
 * **Display grid** where I set new names to the grid elements to made it easier to sort on the grid.
 ![grid1](./src-readme/grid1.png)
+
 ![grid2](./src-readme/grid2.png)
 
 * **Grid item hover** property where is set that shows a bullseye when the mouse it's over it to show the player where is the mouse.
