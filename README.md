@@ -28,10 +28,13 @@
 
     On here I just created *3 elements* with only one of them having more content than id:
     * **main id="startScreen":** This element is the one that have other tags inside of itself, it will be our start screen when we load the page for the first time, in her we will see a soldier walking, the title of the game and the buton to start.
+    ![startScreen](./src-readme/startScreen.png)
 
     * **div id="grid":** This div element is where all the game will be stored *(I prefer to use a grid to divide in a better wway the space of the player)*
+    ![gameScreen](./src-readme/gameScreen.png)
 
     * **main id="scoreScreen":** The last one is for when the player dies show a gameover screen with the player stats and a button to restart the game.
+    ![endScreen](./src-readme/endScreen.png)
 
 3. **Scripts calling:** Here is the last part of the body, and where the most important thing occurs, calling the scripts. Now i'm going to explain why the order of the calls are made in an easy way. *(Later I will enter on a deep explanation of them)*: 
 
@@ -39,4 +42,18 @@
 
     * **game.js:** On the game.js file it's where the things become tricky, here it's where we create the Game class which needs the other classes and create a loop *(by the method **.gameLoop()**)* to never ending the possibility to play the game. And where the other **main** tag and **div** of the body are modified.
 
-    * **script.js:** I'm not going to go deep in here but this file is where are practicaly every **DOM** interaction. 
+    * **script.js:** I'm not going to go deep in here but this file is where are practicaly every **DOM** interaction.
+
+## Document 2: style.css
+### This document doesn't need a lot of explenation, here I take the id, classes and elements and give them the properties that I wanted. The most remarkables are:
+
+* **Button hover** property where I set to decrease the brightnees of the button when the cursor it's over it.
+![buttonProperties](./src-readme/buttonProperties.png)
+![buttonHover](./src-readme/buttonHover.png)
+
+* **Display grid** where I set new names to the grid elements to made it easier to sort on the grid.
+![grid1](./src-readme/grid1.png)
+![grid2](./src-readme/grid2.png)
+
+* **Grid item hover** property where is set that shows a bullseye when the mouse it's over it to show the player where is the mouse.
+![bullseyeHover](./src-readme/bullseyeHover.png)
