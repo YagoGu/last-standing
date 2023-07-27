@@ -67,18 +67,18 @@ class Player {
         const playerDiedSound = new Audio ("./audios/playerDied.mp3")
         switch (this.life) {
             case 4:
-                document.getElementById("doom-guy-face").src = "/src/doom-guy-face-4.png";
+                document.getElementById("doom-guy-face").src = "./src/doom-guy-face-4.png";
                 break;
             case 3:
-                document.getElementById("doom-guy-face").src = "/src/doom-guy-face-3.png";
+                document.getElementById("doom-guy-face").src = "./src/doom-guy-face-3.png";
                 attackedSound.play();
                 break;
             case 2:
-                document.getElementById("doom-guy-face").src = "/src/doom-guy-face-2.png";
+                document.getElementById("doom-guy-face").src = "./src/doom-guy-face-2.png";
                 attackedSound.play();
                 break;
             case 1:
-                document.getElementById("doom-guy-face").src = "/src/doom-guy-face-1.png";
+                document.getElementById("doom-guy-face").src = "./src/doom-guy-face-1.png";
                 attackedSound.play();
                 break;
             case 0:
