@@ -64,6 +64,7 @@
 ![buttonHover](./src-readme/buttonHover.png)
 
 * **Display grid** where I set new names to the grid elements to made it easier to sort on the grid.
+
 ![grid1](./src-readme/grid1.png)
 
 ![grid2](./src-readme/grid2.png)
