@@ -66,7 +66,19 @@
 * **Grid item hover** property where is set that shows a bullseye when the mouse it's over it to show the player where is the mouse.
 ![bullseyeHover](./src-readme/bullseyeHover.png)
 
-## Table of resources
-| resources name | resources     |
-|----------------|---------------|
-| alien.gif      | ![alien.gif](./src/alien.gif) |
+## Resources table
+| resources name      | resources                               |
+|---------------------|-----------------------------------------|
+| alien.gif           | ![alien.gif](./src/alien.gif)           |
+| doom-guy.gif        | ![alien.gif](./src/doom-guy.gif)        |
+| shotgun.gif         | ![alien.gif](./src/shotgun.gif)         |
+| shotgun.png         | ![alien.gif](./src/shotgun.png)         |
+| bullseye.png        | ![alien.gif](./src/bullseye.png)        |
+| heart.png           | ![alien.gif](./src/heart.png)           |
+| doom-guy-face-4.png | ![alien.gif](./src/doom-guy-face-4.png) |
+| doom-guy-face-3.png | ![alien.gif](./src/doom-guy-face-3.png) |
+| doom-guy-face-2.png | ![alien.gif](./src/doom-guy-face-2.png) |
+| doom-guy-face-1.png | ![alien.gif](./src/doom-guy-face-1.png) |
+| bg-body.png         | ![alien.gif](./src/bg-body.png)         |
+| bg-gameplay.png     | ![alien.gif](./src/bg-gameplay.png)     |
+| bg-interface.png    | ![alien.gif](./src/bg-interface.png)    |
