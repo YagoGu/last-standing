@@ -10,5 +10,31 @@
 * You will need to kill the aliens by clicking on them before they attack you
 * You will make points by killing alliens
 * If you didn't kill the alien before it attacks you, you are going to lose life and don't make points
-* The game will ends when you will lose all your character life or by surrendering
+* If you failed the shoot you will lose points
+* The game will ends when you will lose all your character life
+* You will need to play it ;) https://yagogu.github.io/last-standing/
 
+# Now I will go with the nerd thingies
+
+## Document 1: index.html
+### I will divide the contend of this file by 3:
+1. **Head:**
+    
+    The head of this project only have a few importat things which are the **css file** and the **name of the game**
+
+2. **Body tags:**
+
+    On here I just created *3 elements* with only one of them having more content than id:
+    * **main id="startScreen":** This element is the one that have other tags inside of itself, it will be our start screen when we load the page for the first time, in her we will see a soldier walking, the title of the game and the buton to start.
+
+    * **div id="grid":** This div element is where all the game will be stored *(I prefer to use a grid to divide in a better wway the space of the player)*
+
+    * **main id="scoreScreen":** The last one is for when the player dies show a gameover screen with the player stats and a button to restart the game.
+
+3. **Scripts calling:** Here is the last part of the body, and where the most important thing occurs, calling the scripts. Now i'm going to explain why the order of the calls are made in an easy way. *(Later I will enter on a deep explanation of them)*: 
+
+    * **classes.js:** This file is called first because is where I declared the classes.
+
+    * **game.js:** On the game.js file it's where the things become tricky, here it's where we create the Game class which needs the other classes and create a loop *(by the method **.gameLoop()**)* to never ending the possibility to play the game. And where the other **main** tag and **div** of the body are modified.
+
+    * **script.js:** I'm not going to go deep in here but this file is where are practicaly every **DOM** interaction. 
