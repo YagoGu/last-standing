@@ -66,5 +66,7 @@
 * **Grid item hover** property where is set that shows a bullseye when the mouse it's over it to show the player where is the mouse.
 ![bullseyeHover](./src-readme/bullseyeHover.png)
 
-## Document 4: game.js
-### 
+## Table of resources
+| resources name | resources     |
+|----------------|---------------|
+| alien.gif      | ![alien.gif](./src/alien.gif) |
