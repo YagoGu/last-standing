@@ -15,7 +15,7 @@ class Alien {
     alienSpawn(position) {
         const alien = document.createElement("img")
         alien.id="alien"
-        alien.src="/src/alien.gif"
+        alien.src="./src/alien.gif"
         alien.style.width = "60%"
         
         //console.log(position) //testing

@@ -35,8 +35,8 @@ function gameScreenGenerator () {
         </div>
         <div class="grid-item grid-player"><img src="/src/shotgun.png" alt="shotgun" id="shotgun"></div>
         <div class="grid-item grid-life">
-            <p><img src="/src/heart.png" alt="heart" id="heart"> X <b id="life-points"></b></p>
-            <img src="/src/doom-guy-face-4.png" alt="doom-guy-face" id="doom-guy-face">
+            <p><img src="./src/heart.png" alt="heart" id="heart"> X <b id="life-points"></b></p>
+            <img src="./src/doom-guy-face-4.png" alt="doom-guy-face" id="doom-guy-face">
         </div>
     `
     return gameScreen;
@@ -49,6 +49,8 @@ class Game {
     }
     gameLoop() {
         if (this.gameIsOver && this.gameStart) {
+
+
             console.log('GAME OVER');
             const scoreScreenShow = highScoreScreenGenerator();
             document.getElementById("scoreScreen").innerHTML = scoreScreenShow
