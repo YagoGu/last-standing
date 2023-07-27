@@ -1,5 +1,7 @@
 # LAST STANDING
 
+**WARNING: First of all i want to say that the sprites and sounds are not mine, the sprites creation belong to the original creators of DOOM saga and the background images have the creators watermark on porpuse to show who create them. *(The sounds are from DOOM 1, The Legend of Zelda & som of them are free use)***
+
 ## This game is base on one of the bests FPS that ever existed, DOOM.
 
 ### You will be a militar standing in a corridor defending yourself and others from alliens using your shotgun.
