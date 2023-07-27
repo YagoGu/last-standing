@@ -42,7 +42,14 @@
 
     * **game.js:** On the game.js file it's where the things become tricky, here it's where we create the Game class which needs the other classes and create a loop *(by the method **.gameLoop()**)* to never ending the possibility to play the game. And where the other **main** tag and **div** of the body are modified.
 
-    * **script.js:** I'm not going to go deep in here but this file is where are practicaly every **DOM** interaction.
+    * **script.js:** I'm not going to go deep in here but this file is where are practicaly every **DOM** interaction, here are a few things that does:
+        * reset stats by clicking start and restart button.
+        * generate the soundtrack & the game screen.
+        * mantain the alien spaw one by one and when they spawn.
+        * check when & where the players click
+        * check if the alien dies by the shootgun or time
+        * upgrade the players life & score
+        * call the *gameLoop()* method
 
 ## Document 2: style.css
 ### This document doesn't need a lot of explenation, here I take the id, classes and elements and give them the properties that I wanted. The most remarkables are:
@@ -59,21 +66,5 @@
 * **Grid item hover** property where is set that shows a bullseye when the mouse it's over it to show the player where is the mouse.
 ![bullseyeHover](./src-readme/bullseyeHover.png)
 
-## Document 3: classes.js
-### As I explained before this file creates the classes for the game:
-
-* **Alien:** This class is made by three methods & one property on the constructor:
-    * **alienExist** Property is made to know if the alien exist.
-    * **alienPositon()** This method will select a random position of the grid by using *Math.random()* and *Math.floor()* methods
-    * **alienSpawn(position)** This other will needs the *alienPostion()* to know where to spawn the alien and then create a new one.
-    * **alienDie()** The last one will delete the alien element from the grid when it's called.
-* **Player:** This class have 4 properties & 3 methods:
-    * **Properties**
-        * **scoreAlien** It's used to know how much aliens you killed.
-        * **scoreFailed** It's used to know how much shots you failed.
-        * **scoreTotal** It's to set the score to 0 & later updating it.
-        * **life** To check te lifes thatthe player have before diying
-    * **Methods**
-        * **shoot()** This method is made to change the shootgun image to the shoot animation and sound.
-        * **scoreCounter()** This one updates the score by  adding scoreAlien multiplied by 1000 and substract score failed multiplied by 500.
-        * **changeFace()** The las one method checks the life of the player and changes the face of the character related to the numbers of life they are having at that with that the player makes a hurted sound and when it arrives to 0 sounds a music of game over screen.
+## Document 4: game.js
+### 
