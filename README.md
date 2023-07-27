@@ -8,13 +8,13 @@
 
 #### Soo let's explain how the game will works:
 
-* You will be standing on a position with a shotgun
-* You will need to kill the aliens by clicking on them before they attack you
-* You will make points by killing alliens
-* If you didn't kill the alien before it attacks you, you are going to lose life and don't make points
-* If you failed the shoot you will lose points
-* The game will ends when you will lose all your character life
-* You will need to play it ;) https://yagogu.github.io/last-standing/
+* You will be standing on a position with a shotgun.
+* You will need to kill the aliens by clicking on them before they attack you.
+* You will make points by killing alliens.
+* If you didn't kill the alien before it attacks you, you are going to lose life and don't make points.
+* If you failed the shoot you will lose points.
+* The game will ends when you will lose all your character life.
+* You will need to play it ;) https://yagogu.github.io/last-standing/.
 
 # Now I will go with the nerd thingies
 
@@ -22,7 +22,7 @@
 ### I will divide the contend of this file by 3:
 1. **Head:**
     
-    The head of this project only have a few importat things which are the **css file** and the **name of the game**
+    The head of this project only have a few importat things which are the **css file** and the **name of the game**.
 
 2. **Body tags:**
 
@@ -30,7 +30,7 @@
     * **main id="startScreen":** This element is the one that have other tags inside of itself, it will be our start screen when we load the page for the first time, in her we will see a soldier walking, the title of the game and the buton to start.
     ![startScreen](./src-readme/startScreen.png)
 
-    * **div id="grid":** This div element is where all the game will be stored *(I prefer to use a grid to divide in a better wway the space of the player)*
+    * **div id="grid":** This div element is where all the game will be stored *(I prefer to use a grid to divide in a better wway the space of the player)*.
     ![gameScreen](./src-readme/gameScreen.png)
 
     * **main id="scoreScreen":** The last one is for when the player dies show a gameover screen with the player stats and a button to restart the game.
@@ -57,3 +57,22 @@
 
 * **Grid item hover** property where is set that shows a bullseye when the mouse it's over it to show the player where is the mouse.
 ![bullseyeHover](./src-readme/bullseyeHover.png)
+
+## Document 3: classes.js
+### As I explained before this file creates the classes for the game:
+
+* **Alien:** This class is made by three methods & one property on the constructor:
+    * **alienExist** Property is made to know if the alien exist.
+    * **alienPositon()** This method will select a random position of the grid by using *Math.random()* and *Math.floor()* methods
+    * **alienSpawn(position)** This other will needs the *alienPostion()* to know where to spawn the alien and then create a new one.
+    * **alienDie()** The last one will delete the alien element from the grid when it's called.
+* **Player:** This class have 4 properties & 3 methods:
+    * **Properties**
+        * **scoreAlien** It's used to know how much aliens you killed.
+        * **scoreFailed** It's used to know how much shots you failed.
+        * **scoreTotal** It's to set the score to 0 & later updating it.
+        * **life** To check te lifes thatthe player have before diying
+    * **Methods**
+        * **shoot()** This method is made to change the shootgun image to the shoot animation and sound.
+        * **scoreCounter()** This one updates the score by  adding scoreAlien multiplied by 1000 and substract score failed multiplied by 500.
+        * **changeFace()** The las one method checks the life of the player and changes the face of the character related to the numbers of life they are having at that with that the player makes a hurted sound and when it arrives to 0 sounds a music of game over screen.
